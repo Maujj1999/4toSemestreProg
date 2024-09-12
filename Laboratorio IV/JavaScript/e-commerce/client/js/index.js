@@ -1,7 +1,7 @@
 const shopContent = document.getElementById("shopContent");
-const cart = [];//Este es muestro carrito, un array vacio
+const cart = []; // Este es nuestro carrito, un array vacío
 
-productos.forEach((product) =>{
+productos.forEach((product) => {
     const content = document.createElement("div");
     content.innerHTML = `
     <img src="${product.img}">
@@ -17,20 +17,22 @@ productos.forEach((product) =>{
 
     buyButton.addEventListener("click", () => {
         const repeat = cart.some((repeatProduct) => repeatProduct.id === product.id);
-        if(repeat) {
+        if (repeat) {
             cart.map((prod) => {
-              if(prod.id === product.id){
-                prod.quanty++;
-              }  
+                if (prod.id === product.id) {
+                    prod.quanty++;
+                }
             });
         } else {
-        cart.push({
-            id: product.id,
-            productName: product.productName,
-            price: product.price,
-            quanty: product.quanty,
-            img: product.img,
-        });
+            cart.push({
+                id: product.id,
+                productName: product.productName,
+                price: product.price,
+                quanty: 1, // Inicializamos la cantidad en 1 cuando se agrega por primera vez
+                img: product.img,
+            });
+            displayCartCounter(); // Llamamos a la función que actualiza el contador del carrito
         }
+        console.log(cart);
     });
 });

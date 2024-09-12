@@ -1,6 +1,5 @@
-/*products styles*/
 .card-products-container {
-    margin: 5vh auto;
+    margin: 5px;
 }
 
 .card-products {
@@ -8,7 +7,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    flex-wrap: wrap;  
+    flex-wrap: wrap;
 }
 
 .card-products img {
@@ -21,19 +20,19 @@
     border: none;
     outline: 0;
     padding: 10px;
-    color: white;
-    background-color: #1bcb7f;
+    color: burlywood;
+    background-color: blue;
     text-align: center;
     cursor: pointer;
     width: 100%;
     font-size: 15px;
 }
+
 .card-products button:hover {
     opacity: 0.7;
 }
 
-/*card button*/
-.card-btn {
+.cart-btn {
     position: fixed;
     top: 90vh;
     right: 40px;
@@ -50,6 +49,21 @@
     opacity: 0.9;
 }
 
+.cart-counter{
+    display: none;
+    position: fixed;
+    top: 89vh;
+    right: 27px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #ed3434;
+    padding: 4px;
+    border-radius: 50%;
+    height: 17px;
+    width: 17px;
+    font-size: 15px;
+}
+
 /*modal*/
 .modal-overlay {
     display: none;
@@ -59,8 +73,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: -1;
 }
+
 .modal-container {
     display: none;
     background-color: #ffffff;
@@ -70,19 +85,17 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 100%;
-    width: 100%;
-    z-index: 1;
-    max-height: 80vh;
-    overflow-y: auto;
 }
+
 .modal-container::-webkit-scrollbar {
     display: none;
 }
+
 .modal-close {
     float: right;
     cursor: pointer;
 }
+
 .modal-title {
     font-size: 24px;
     font-weight: bold;
@@ -90,7 +103,7 @@
     text-align: center;
 }
 
-/*modal-body*/
+/* modal-body*/
 .modal-body {
     margin-bottom: 20px;
     text-align: center;
@@ -115,7 +128,7 @@
 }
 
 .product-info h4 {
-    margin-top: 35px;
+    margin-top: 34px;
 }
 
 .quantity {
@@ -128,15 +141,15 @@
 
 .quantity-btn-decrese,
 .quantity-btn-increse {
-    color: #333333;
+    color: #457826;
     cursor: pointer;
-    font-size: pointer;
+    font-size: 16px;
     width: 28px;
     font-weight: bold;
 }
 
-.quantity-input {
-    color: #333333;
+.quantity-imput {
+    color: #457826;
     font-size: 16px;
     padding: 10 10px;
     text-align: center;
@@ -144,13 +157,14 @@
     font-weight: bold;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and(max-width: 500px) {
     .product-img {
         display: none;
     }
+
     .modal-body {
+        margin-top: 5px;
         margin-left: 5px;
-        margin-right: 5px;
     }
 }
 
@@ -160,17 +174,17 @@
     margin-top: 20px;
 }
 
-.delete-product {
+.delete-product{
     margin-top: 20px;
-    margin-left: 2em;
+    margin-left: 20px;
     cursor: pointer;
 }
 
-.modal-footer {
+.modal-footer{
     text-align: center;
 }
 
-.total-price {
+.total-price{
     font-size: 20px;
     font-weight: bold;
     margin-top: 20px;
